@@ -36,3 +36,13 @@ The following screenshots show the output for some examples of the three storefr
 ![Application Examples](/screenshots/customerpurchase.jpg?raw=true)
 
 ![Application Examples](/screenshots/managerlist.jpg?raw=true)
+
+![Application Examples](/screenshots/lowinventory.jpg?raw=true)
+
+![Application Examples](/screenshots/addinventory.jpg?raw=true)
+
+![Application Examples](/screenshots/newproduct.jpg?raw=true)
+
+![Application Examples](/screenshots/depttable.jpg?raw=true)
+
+![Application Examples](/screenshots/adddept.jpg?raw=true)
