@@ -33,6 +33,6 @@ Analyse the three .js files for code specifics.  The basic flow of all three par
 
 The following screenshots show the output for some examples of the three storefront modules:
 
-![Application Examples](/screenshot1.jpg?raw=true)
+![Application Examples](/screenshots/customerpurchase.jpg?raw=true)
 
-![Application Examples](/screenshot2.jpg?raw=true)
+![Application Examples](/screenshots/managerlist.jpg?raw=true)
