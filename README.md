@@ -1,4 +1,7 @@
 # bamazon
+https://github.com/groodymoloko/bamazon.git
+
+
 A simple storefront Node command line application that allows the following operations:
 * Customers can list inventory and purchase items.
 * Managers can view products including low inventory items, add current products, and create new products.
