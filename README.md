@@ -5,7 +5,7 @@ A simple storefront Node command line application that allows the following oper
 * Supervisors can view sales and profit by department and create new departments.
 
 ## NPM Modules & Files
-The following NPM modules and components are required by the application:
+The following NPM modules are required by the application:
 * mysql
 * inquirer
 * console.table
@@ -23,7 +23,7 @@ Analyse the three .js files for code specifics.  The basic flow of all three par
 3) Accept user choice and launch appropriate switch case function
 4) Perform correct function (purchase, add inventory, display sales and profit, etc.)
 
-## Examples
+## Examples (run from Git Bash or other command line utility)
 * $ node bamazonCustomer.js
 * $ node bamazonManager.js
 * $ node bamazonSupervisor.js
