@@ -1,8 +1,8 @@
-var mysql = require("mysql");
-var inquirer = require("inquirer");
+const mysql = require("mysql");
+const inquirer = require("inquirer");
 
 // create the connection information for the sql database
-var connection = mysql.createConnection({
+let connection = mysql.createConnection({
   host: "localhost",
 
   port: 3306,
@@ -22,12 +22,15 @@ connection.connect(function(err) {
 
 // presents the for sale items to the user
 function printInventory() {
+  console.log ("\n");
+  console.log ("=================================================");
+  console.log (`          ***  WELCOME TO BAMAZON  ***           `);
   console.log ("=================================================");
   console.log ("Here are all the items for sale");
   console.log ("=================================================");
   let inventoryList = "SELECT item_id, product_name, price FROM products";
   connection.query(inventoryList, function(err, res) {
-    for (var i = 0; i < res.length; i++) {
+    for (let i = 0; i < res.length; i++) {
       console.log("Item: " + res[i].item_id + " || Name: " + res[i].product_name + " || Price: $" + res[i].price);
     }
     console.log ("=================================================");
@@ -68,6 +71,14 @@ function getPurchase() {
         } 
         else {
           let newQuantity = chosenItem.stock_quantity - parseInt(answer.howMany);
+          let newSales = chosenItem.product_sales + (parseInt(answer.howMany) * chosenItem.price);
+          connection.query(
+            "UPDATE products SET ? WHERE ?",
+            [
+              { stock_quantity: newQuantity, product_sales: newSales },
+              { item_id: chosenItem.item_id }
+            ],
+          );
           connection.query(
             "UPDATE products SET ? WHERE ?",
             [
